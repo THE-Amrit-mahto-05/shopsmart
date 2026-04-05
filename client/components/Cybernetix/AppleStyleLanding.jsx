@@ -49,7 +49,8 @@ const AppleStyleLanding = () => {
             style={{
               width: '100vw',
               height: '100vh',
-              objectFit: 'cover'
+              objectFit: 'cover',
+              transform: 'translateY(5rem)'
             }}
           />
           <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
