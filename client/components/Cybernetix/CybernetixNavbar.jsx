@@ -50,7 +50,7 @@ const CybernetixNavbar = () => {
                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
               </svg>
             </div>
-            <span className="port-label">CART.LOG</span>
+            <span className="port-label">CART</span>
             <div className="port-badge">03</div>
           </div>
           <div className="commerce-port user-port">
@@ -60,7 +60,7 @@ const CybernetixNavbar = () => {
                 <circle cx="12" cy="7" r="4" />
               </svg>
             </div>
-            <span className="port-label">PROFILE.SYS</span>
+            <span className="port-label">PROFILE</span>
           </div>
         </div>
 
