@@ -2,10 +2,10 @@
   "name": "shopsmart-backend",
   "version": "1.0.0",
   "description": "Backend API for ShopSmart",
-  "main": "src/index.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
     "test": "jest",
     "lint": "echo 'No linter configured yet'"
   },
