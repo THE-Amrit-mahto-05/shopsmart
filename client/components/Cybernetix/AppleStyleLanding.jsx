@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './AppleStyleLanding.css';
+import CybernetixNavbar from './CybernetixNavbar';
 
 const AppleStyleLanding = () => {
   const heroRef = useRef(null);
@@ -38,31 +39,7 @@ const AppleStyleLanding = () => {
 
   return (
     <div className="apple-landing-container">
-      <nav style={{
-        position: 'fixed',
-        top: 0,
-        width: '100%',
-        padding: '0.75rem 0',
-        background: 'rgba(0,0,0,0.8)',
-        backdropFilter: 'blur(10px)',
-        zIndex: 1000,
-        display: 'flex',
-        justifyContent: 'center',
-        borderBottom: '1px solid #111'
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', maxWidth: '1400px', width: '100%', padding: '0 1rem' }}>
-          <img src="/assets/logo.png" alt="Logo" style={{ height: '30px' }} />
-          <div className="brand-font neon-text" style={{ fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.2rem' }}>
-            CYBERNETIX
-          </div>
-          <div style={{ flex: 1 }}></div>
-          <div style={{ display: 'flex', gap: '2rem', fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
-            <a href="#" style={{ textDecoration: 'none', color: 'inherit' }}>STORE</a>
-            <a href="#" style={{ textDecoration: 'none', color: 'inherit' }}>DRONES</a>
-            <a href="#" style={{ textDecoration: 'none', color: 'inherit' }}>SUPPORT</a>
-          </div>
-        </div>
-      </nav>
+      <CybernetixNavbar />
       <section className="section hero-section" ref={heroRef} style={{ height: '100vh', width: '100vw', padding: 0, position: 'relative', overflow: 'hidden' }}>
         <div className={`hero-3d-container ${isVisible ? 'visible' : ''}`} style={{ width: '100vw', height: '100vh', position: 'absolute', top: 0, left: 0 }}>
           <img
