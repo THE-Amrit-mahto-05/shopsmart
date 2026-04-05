@@ -96,9 +96,9 @@ const AppleStyleLanding = () => {
             <p>Experience cinematic stability with our next-gen 3-axis stabilizer. Ultra-HD sensors capture every detail with surgical precision.</p>
             <a href="#" className="apple-cta">Learn more</a>
           </div>
-          <div className="feature-image img-container" style={{ 
-            opacity: scrollProgress > 0.5 ? 1 : 0, 
-            transform: `scale(${scrollProgress > 0.5 ? 1 : 0.85})`, 
+          <div className="feature-image img-container" style={{
+            opacity: scrollProgress > 0.5 ? 1 : 0,
+            transform: `scale(${scrollProgress > 0.5 ? 1 : 0.85})`,
             transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
             height: '400px',
             display: 'flex',
@@ -109,12 +109,12 @@ const AppleStyleLanding = () => {
           </div>
         </div>
       </section>
-      <section className="section feature-section" style={{ background: '#050505', padding: '4rem 0' }}>
+      <section className="section feature-section" style={{ background: '#000000', padding: '4rem 0' }}>
         <div className="feature-grid" style={{ gridTemplateColumns: 'minmax(0, 1fr) 1.2fr', maxWidth: '1400px', width: '90%', margin: '0 auto', alignItems: 'center' }}>
-          <div className="feature-image img-container" style={{ 
+          <div className="feature-image img-container" style={{
             order: 2,
-            opacity: scrollProgress > 1.3 ? 1 : 0, 
-            transform: `scale(${scrollProgress > 1.3 ? 1 : 0.85})`, 
+            opacity: scrollProgress > 1.3 ? 1 : 0,
+            transform: `scale(${scrollProgress > 1.3 ? 1 : 0.85})`,
             transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
             height: '400px',
             display: 'flex',
@@ -123,10 +123,10 @@ const AppleStyleLanding = () => {
           }}>
             <img src="/assets/drone_pedestal_3d.png" alt="Drone Unit" className="no-watermark" style={{ maxHeight: '100%', objectFit: 'contain' }} />
           </div>
-          <div className="feature-content" style={{ 
+          <div className="feature-content" style={{
             order: 1,
-            opacity: scrollProgress > 1.3 ? 1 : 0, 
-            transform: `translateY(${scrollProgress > 1.3 ? 0 : 40}px)`, 
+            opacity: scrollProgress > 1.3 ? 1 : 0,
+            transform: `translateY(${scrollProgress > 1.3 ? 0 : 40}px)`,
             transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1)'
           }}>
             <h3 className="neon-text" style={{ fontSize: '1rem', letterSpacing: '0.2em' }}>POWER</h3>
@@ -156,7 +156,7 @@ const AppleStyleLanding = () => {
 
       <footer style={{ padding: '4rem', textAlign: 'center', background: '#000', borderTop: '1px solid #111' }}>
         <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem' }}>
-          © 2026 CYBERNETIX AEROSPACE. Designed for the Future.
+          © 2026 CYBERNETIX Designed for the Future.
         </div>
       </footer>
     </div>
