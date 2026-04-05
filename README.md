@@ -2,7 +2,7 @@
 
 This project is a full-stack e-commerce application built with React (Vite) and Node.js (Express), following a strict production-readiness roadmap.
 
-## 🏗️ Architecture & Workflow
+## Architecture & Workflow
 
 ### Tech Stack
 - **Frontend**: React (Functional Components), Tailwind CSS, Vitest (Unit Testing).
@@ -10,7 +10,7 @@ This project is a full-stack e-commerce application built with React (Vite) and 
 - **CI/CD**: GitHub Actions (Linting, Testing, and Automated Deployment).
 - **Deployment**: AWS EC2 with PM2 process management.
 
-### 🔄 Project Workflow
+### Project Workflow
 1. **Local Development**: Use `npm run dev` in both `client` and `server` folders.
 2. **Quality Assurance**: 
    - `npm run lint`: Enforces clean code with ESLint.
@@ -22,18 +22,18 @@ This project is a full-stack e-commerce application built with React (Vite) and 
    - Connects to **AWS EC2** via SSH.
    - Pulls the latest code, installs dependencies, and restarts the backend via **PM2**.
 
-## 🛠️ Setup & Installation
+## Setup & Installation
 Run the idempotent setup script to initialize all environments:
 ```bash
 ./scripts/setup.sh
 ```
 
-## 🧪 Testing
+## Testing
 - **Unit Tests**: `cd client && npm run test`
 - **Integration Tests**: `cd server && npm run test`
 - **E2E Tests**: `cd client && npx playwright test`
 
-## 🔒 Security
+## Security
 - **Dependabot**: Automatically monitors and updates outdated dependencies weekly.
 - **Environment Variables**: Managed via `.env` files (excluded from Git).
 
