@@ -26,6 +26,81 @@ const CybernetixNavbar = () => {
           <div className="hud-search-line"></div>
         </div>
         <div className="hud-nav-links">
+          <div className="hud-link categories-container">
+            <span className="link-hover-frame">[</span>
+            CATEGORIES
+            <span className="link-hover-frame">]</span>
+            <div className="hud-dropdown mega-menu">
+              <div className="mega-menu-grid">
+
+                <div className="mega-menu-column">
+                  <div className="mega-menu-title">Drones</div>
+                  <a href="#" className="mega-menu-item">Camera Drones</a>
+                  <a href="#" className="mega-menu-item">Racing Drones</a>
+                  <a href="#" className="mega-menu-item">FPV Drones</a>
+                  <a href="#" className="mega-menu-item">Beginner Drones</a>
+                </div>
+
+                <div className="mega-menu-column">
+                  <div className="mega-menu-title">Robotics Kits</div>
+                  <a href="#" className="mega-menu-item">Beginner Kits</a>
+                  <a href="#" className="mega-menu-item">Advanced Kits</a>
+                  <a href="#" className="mega-menu-item">STEM Learning</a>
+                  <a href="#" className="mega-menu-item">AI / ML Robots</a>
+                </div>
+
+                <div className="mega-menu-column">
+                  <div className="mega-menu-title">Components</div>
+                  <a href="#" className="mega-menu-item">Motors & Servos</a>
+                  <a href="#" className="mega-menu-item">Sensors</a>
+                  <a href="#" className="mega-menu-item">Microcontrollers</a>
+                  <a href="#" className="mega-menu-item">Batteries & Power</a>
+                </div>
+
+                <div className="mega-menu-column">
+                  <div className="mega-menu-title">Controllers & FPV</div>
+                  <a href="#" className="mega-menu-item">Remote Controllers</a>
+                  <a href="#" className="mega-menu-item">FPV Goggles</a>
+                  <a href="#" className="mega-menu-item">Transmitters & RX</a>
+                </div>
+
+                <div className="mega-menu-column">
+                  <div className="mega-menu-title">AI & Smart Systems</div>
+                  <a href="#" className="mega-menu-item">Vision Modules</a>
+                  <a href="#" className="mega-menu-item">AI Boards</a>
+                  <a href="#" className="mega-menu-item">Automation</a>
+                </div>
+
+                <div className="mega-menu-column">
+                  <div className="mega-menu-title">Parts & Accessories</div>
+                  <a href="#" className="mega-menu-item">Frames & Chassis</a>
+                  <a href="#" className="mega-menu-item">Propellers</a>
+                  <a href="#" className="mega-menu-item">Landing Gear</a>
+                  <a href="#" className="mega-menu-item">Wires & Connectors</a>
+                </div>
+
+                <div className="mega-menu-column">
+                  <div className="mega-menu-title">Tools & Equipment</div>
+                  <a href="#" className="mega-menu-item">Soldering Kits</a>
+                  <a href="#" className="mega-menu-item">Repair Tools</a>
+                  <a href="#" className="mega-menu-item">Testing Equipment</a>
+                </div>
+
+                <div className="mega-menu-column">
+                  <div className="mega-menu-title">Combos & Bundles</div>
+                  <a href="#" className="mega-menu-item">Drone + Accessories</a>
+                  <a href="#" className="mega-menu-item">Robotics Starters</a>
+                </div>
+
+                <div className="mega-menu-column">
+                  <div className="mega-menu-title">Learning & DIY</div>
+                  <a href="#" className="mega-menu-item">DIY Projects</a>
+                  <a href="#" className="mega-menu-item">Tutorial Kits</a>
+                  <a href="#" className="mega-menu-item">Educational Packs</a>
+                </div>
+
+              </div>
+            </div>          </div>
           <a href="#" className="hud-link">
             <span className="link-hover-frame">[</span>
             DRONES
@@ -63,7 +138,6 @@ const CybernetixNavbar = () => {
             <span className="port-label">PROFILE</span>
           </div>
         </div>
-
       </div>
     </nav>
   );

@@ -37,16 +37,14 @@ model-viewer {
   justify-content: center;
   align-items: center;
   background-color: #000;
-  /* Ultimate Void Black Masking */
   box-shadow: inset 0 0 100px 60px #000;
-  border-radius: 20px; /* Subtle smoothing */
+  border-radius: 20px;
 }
 
 .no-watermark {
   transform: scale(1.1);
   object-fit: cover;
-  mix-blend-mode: screen; 
-  /* Force both images to use the same black baseline */
+  mix-blend-mode: screen;
   filter: brightness(1.0) contrast(1.3) grayscale(0.3);
   opacity: 0.95;
 }
@@ -62,7 +60,7 @@ model-viewer {
 }
 
 .hero-section {
-  background: radial-gradient(circle at center, #111, #000);
+  background: #000000;
 }
 
 .hero-3d-container {
