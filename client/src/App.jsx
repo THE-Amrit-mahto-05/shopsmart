@@ -1,7 +1,7 @@
-import HomePage from "../components/homepage";
+import AppleStyleLanding from "../components/Cybernetix/AppleStyleLanding";
 
 function App() {
-  return <HomePage />;
+  return <AppleStyleLanding />;
 }
 
 export default App;
