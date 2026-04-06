@@ -11,59 +11,39 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy via native SSH
+      - name: Setup SSH key
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          EC2_HOST: ${{ secrets.EC2_HOST }}
-          EC2_USER: ${{ secrets.EC2_USER }}
         run: |
-          # Trim any accidental whitespace from secrets
-          HOST=$(echo "$EC2_HOST" | tr -d '[:space:]')
-          USER_NAME=$(echo "$EC2_USER" | tr -d '[:space:]')
-
-          # Setup SSH key
           mkdir -p ~/.ssh
           printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/ec2.pem
           chmod 600 ~/.ssh/ec2.pem
 
-          # SSH into EC2 and deploy
+      - name: Copy deploy script to EC2
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+        run: |
+          HOST=$(echo "$EC2_HOST" | tr -d '[:space:]')
+          USER_NAME=$(echo "$EC2_USER" | tr -d '[:space:]')
+          scp -i ~/.ssh/ec2.pem \
+            -o StrictHostKeyChecking=no \
+            -o UserKnownHostsFile=/dev/null \
+            -o PubkeyAcceptedKeyTypes=+ssh-rsa \
+            -o HostKeyAlgorithms=+ssh-rsa \
+            scripts/remote-deploy.sh ${USER_NAME}@${HOST}:~/remote-deploy.sh
+
+      - name: Execute deploy script on EC2
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+        run: |
+          HOST=$(echo "$EC2_HOST" | tr -d '[:space:]')
+          USER_NAME=$(echo "$EC2_USER" | tr -d '[:space:]')
           ssh -i ~/.ssh/ec2.pem \
             -o StrictHostKeyChecking=no \
             -o UserKnownHostsFile=/dev/null \
             -o PubkeyAcceptedKeyTypes=+ssh-rsa \
             -o HostKeyAlgorithms=+ssh-rsa \
             -o ConnectTimeout=30 \
-            ${USER_NAME}@${HOST} bash -s << 'ENDSSH'
-              set -e
-              echo "Connected to EC2 successfully!"
-
-              # Clone repo if it doesn't exist
-              if [ ! -d "$HOME/shopsmart" ]; then
-                git clone https://github.com/THE-Amrit-mahto-05/shopsmart $HOME/shopsmart
-              fi
-
-              cd $HOME/shopsmart
-              git fetch --all
-              git reset --hard origin/main
-
-              # Install Node.js if missing
-              if ! command -v node &> /dev/null; then
-                curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-                sudo apt-get install -y nodejs
-              fi
-
-              # Install PM2 if missing
-              if ! command -v pm2 &> /dev/null; then
-                sudo npm install -g pm2
-              fi
-
-              # Install backend dependencies
-              cd $HOME/shopsmart/server
-              npm install --no-fund
-
-              # Start or restart the backend
-              pm2 restart shopsmart-backend 2>/dev/null || pm2 start src/app.js --name shopsmart-backend
-              pm2 save
-
-              echo "Deployment completed successfully!"
-ENDSSH
+            ${USER_NAME}@${HOST} "chmod +x ~/remote-deploy.sh && ~/remote-deploy.sh"
