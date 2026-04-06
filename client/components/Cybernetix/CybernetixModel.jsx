@@ -1,12 +1,11 @@
 import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Float, PerspectiveCamera, MeshDistortMaterial } from '@react-three/drei';
-import * as THREE from 'three';
+import { Float } from '@react-three/drei';
 
 const Rotor = ({ position }) => {
   const rotorRef = useRef();
 
-  useFrame((state) => {
+  useFrame(() => {
     if (rotorRef.current) {
       rotorRef.current.rotation.y += 0.5;
     }
