@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  backend:
+    image: amritkumarmahto005/shopsmart-backend:v2
+    container_name: shopsmart-backend
+    ports:
+      - "5001:5000"
+    networks:
+      - shopsmart-net
+    depends_on:
+      - mongo
+
+  frontend:
+    image: amritkumarmahto005/shopsmart-frontend:v2
+    container_name: shopsmart-frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - shopsmart-net
+    depends_on:
+      - backend
+
+  mongo:
+    image: mongo
+    container_name: shopsmart-mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - shopsmart-net
+
+networks:
+  shopsmart-net:
