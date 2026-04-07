@@ -1,18 +1,16 @@
-version: "3.9"
-
 services:
   backend:
-    image: amritkumarmahto005/shopsmart-backend:v2
+    image: amritkumarmahto005/shopsmart-backend:v3
     container_name: shopsmart-backend
     ports:
-      - "5001:5000"
+      - "5001:5000"   # host:container (IMPORTANT FIX)
     networks:
       - shopsmart-net
     depends_on:
       - mongo
 
   frontend:
-    image: amritkumarmahto005/shopsmart-frontend:v2
+    image: amritkumarmahto005/shopsmart-frontend:v3
     container_name: shopsmart-frontend
     ports:
       - "3000:3000"

@@ -1,13 +1,12 @@
-FROM node:22
+FROM node:18
 
 WORKDIR /app
 
-COPY package*.json ./
-
+COPY client/package*.json ./
 RUN npm install
 
-COPY . .
+COPY client .
 
-EXPOSE 5173
+EXPOSE 3000
 
 CMD ["npm", "run", "dev", "--", "--host"]
