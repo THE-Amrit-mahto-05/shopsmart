@@ -1,0 +1,242 @@
+.pdp-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--dark-bg);
+}
+
+.pdp-main {
+  display: flex;
+  margin-top: 100px;
+  padding: 0 4rem 4rem 4rem;
+  gap: 4rem;
+  z-index: 10;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pdp-gallery {
+  flex: 1;
+  position: relative;
+}
+
+.pdp-main-image-wrapper {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pdp-main-image-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(0, 242, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.pdp-main-image {
+  max-width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.8));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.pdp-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdp-category-link {
+  color: var(--neon-blue);
+  font-family: var(--hud-font);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.pdp-category-link:hover {
+  opacity: 1;
+  text-shadow: 0 0 10px var(--neon-blue-glow);
+}
+
+.pdp-title {
+  font-family: var(--hud-font);
+  color: var(--text-primary);
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pdp-rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.pdp-rating-stars {
+  color: #ffaa00;
+  letter-spacing: 2px;
+}
+
+.pdp-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--neon-blue);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pdp-price::after {
+  content: 'USD';
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-family: var(--hud-font);
+}
+
+.pdp-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  border-left: 2px solid var(--neon-blue);
+  padding-left: 1.5rem;
+}
+
+.pdp-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--glass-border);
+  padding: 1.5rem;
+}
+
+.pdp-spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pdp-spec-label {
+  font-family: var(--hud-font);
+  font-size: 0.75rem;
+  color: var(--neon-blue);
+  letter-spacing: 1px;
+}
+
+.pdp-spec-value {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.pdp-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: auto;
+}
+
+.qty-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--glass-border);
+  background: rgba(0,0,0,0.5);
+}
+
+.qty-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  width: 40px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.qty-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.qty-input {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 1.1rem;
+  -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add-to-cart-btn {
+  flex: 1;
+  background: var(--neon-blue);
+  border: none;
+  color: #000;
+  font-family: var(--hud-font);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  font-weight: 700;
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+}
+
+.add-to-cart-btn:hover {
+  background: #fff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 2rem;
+  z-index: 10;
+}
