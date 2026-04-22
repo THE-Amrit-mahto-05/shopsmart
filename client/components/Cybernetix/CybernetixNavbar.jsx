@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useCart } from '../../src/context/CartContext';
 import CybernetixCart from './CybernetixCart';
 import './CybernetixNavbar.css';
@@ -38,60 +39,60 @@ const CybernetixNavbar = () => {
                 <div className="mega-menu-grid">
                   <div className="mega-menu-column">
                     <div className="mega-menu-title">Drones</div>
-                    <a href="#" className="mega-menu-item">Camera Drones</a>
-                    <a href="#" className="mega-menu-item">Racing Drones</a>
-                    <a href="#" className="mega-menu-item">FPV Drones</a>
-                    <a href="#" className="mega-menu-item">Beginner Drones</a>
+                    <Link to="/category/camera-drones" className="mega-menu-item">Camera Drones</Link>
+                    <Link to="/category/racing-drones" className="mega-menu-item">Racing Drones</Link>
+                    <Link to="/category/fpv-drones" className="mega-menu-item">FPV Drones</Link>
+                    <Link to="/category/beginner-drones" className="mega-menu-item">Beginner Drones</Link>
                   </div>
                   <div className="mega-menu-column">
                     <div className="mega-menu-title">Robotics Kits</div>
-                    <a href="#" className="mega-menu-item">Beginner Kits</a>
-                    <a href="#" className="mega-menu-item">Advanced Kits</a>
-                    <a href="#" className="mega-menu-item">STEM Learning</a>
-                    <a href="#" className="mega-menu-item">AI / ML Robots</a>
+                    <Link to="/category/beginner-kits" className="mega-menu-item">Beginner Kits</Link>
+                    <Link to="/category/advanced-kits" className="mega-menu-item">Advanced Kits</Link>
+                    <Link to="/category/stem-learning" className="mega-menu-item">STEM Learning</Link>
+                    <Link to="/category/ai-ml-robots" className="mega-menu-item">AI / ML Robots</Link>
                   </div>
                   <div className="mega-menu-column">
                     <div className="mega-menu-title">Components</div>
-                    <a href="#" className="mega-menu-item">Motors & Servos</a>
-                    <a href="#" className="mega-menu-item">Sensors</a>
-                    <a href="#" className="mega-menu-item">Microcontrollers</a>
-                    <a href="#" className="mega-menu-item">Batteries & Power</a>
+                    <Link to="/category/motors-servos" className="mega-menu-item">Motors & Servos</Link>
+                    <Link to="/category/sensors" className="mega-menu-item">Sensors</Link>
+                    <Link to="/category/microcontrollers" className="mega-menu-item">Microcontrollers</Link>
+                    <Link to="/category/batteries-power" className="mega-menu-item">Batteries & Power</Link>
                   </div>
                   <div className="mega-menu-column">
                     <div className="mega-menu-title">Controllers & FPV</div>
-                    <a href="#" className="mega-menu-item">Remote Controllers</a>
-                    <a href="#" className="mega-menu-item">FPV Goggles</a>
-                    <a href="#" className="mega-menu-item">Transmitters & RX</a>
+                    <Link to="/category/remote-controllers" className="mega-menu-item">Remote Controllers</Link>
+                    <Link to="/category/fpv-goggles" className="mega-menu-item">FPV Goggles</Link>
+                    <Link to="/category/transmitters-rx" className="mega-menu-item">Transmitters & RX</Link>
                   </div>
                   <div className="mega-menu-column">
                     <div className="mega-menu-title">AI & Smart Systems</div>
-                    <a href="#" className="mega-menu-item">Vision Modules</a>
-                    <a href="#" className="mega-menu-item">AI Boards</a>
-                    <a href="#" className="mega-menu-item">Automation</a>
+                    <Link to="/category/vision-modules" className="mega-menu-item">Vision Modules</Link>
+                    <Link to="/category/ai-boards" className="mega-menu-item">AI Boards</Link>
+                    <Link to="/category/automation" className="mega-menu-item">Automation</Link>
                   </div>
                   <div className="mega-menu-column">
                     <div className="mega-menu-title">Parts & Accessories</div>
-                    <a href="#" className="mega-menu-item">Frames & Chassis</a>
-                    <a href="#" className="mega-menu-item">Propellers</a>
-                    <a href="#" className="mega-menu-item">Landing Gear</a>
-                    <a href="#" className="mega-menu-item">Wires & Connectors</a>
+                    <Link to="/category/frames-chassis" className="mega-menu-item">Frames & Chassis</Link>
+                    <Link to="/category/propellers" className="mega-menu-item">Propellers</Link>
+                    <Link to="/category/landing-gear" className="mega-menu-item">Landing Gear</Link>
+                    <Link to="/category/wires-connectors" className="mega-menu-item">Wires & Connectors</Link>
                   </div>
                   <div className="mega-menu-column">
                     <div className="mega-menu-title">Tools & Equipment</div>
-                    <a href="#" className="mega-menu-item">Soldering Kits</a>
-                    <a href="#" className="mega-menu-item">Repair Tools</a>
-                    <a href="#" className="mega-menu-item">Testing Equipment</a>
+                    <Link to="/category/soldering-kits" className="mega-menu-item">Soldering Kits</Link>
+                    <Link to="/category/repair-tools" className="mega-menu-item">Repair Tools</Link>
+                    <Link to="/category/testing-equipment" className="mega-menu-item">Testing Equipment</Link>
                   </div>
                   <div className="mega-menu-column">
                     <div className="mega-menu-title">Combos & Bundles</div>
-                    <a href="#" className="mega-menu-item">Drone + Accessories</a>
-                    <a href="#" className="mega-menu-item">Robotics Starters</a>
+                    <Link to="/category/drone-accessories" className="mega-menu-item">Drone + Accessories</Link>
+                    <Link to="/category/robotics-starters" className="mega-menu-item">Robotics Starters</Link>
                   </div>
                   <div className="mega-menu-column">
                     <div className="mega-menu-title">Learning & DIY</div>
-                    <a href="#" className="mega-menu-item">DIY Projects</a>
-                    <a href="#" className="mega-menu-item">Tutorial Kits</a>
-                    <a href="#" className="mega-menu-item">Educational Packs</a>
+                    <Link to="/category/diy-projects" className="mega-menu-item">DIY Projects</Link>
+                    <Link to="/category/tutorial-kits" className="mega-menu-item">Tutorial Kits</Link>
+                    <Link to="/category/educational-packs" className="mega-menu-item">Educational Packs</Link>
                   </div>
                 </div>
               </div>

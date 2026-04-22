@@ -62,8 +62,8 @@ const CategoryPage = () => {
               products.map(product => (
                 <Link to={`/product/${product.id}`} key={product.id} style={{ textDecoration: 'none' }}>
                   <div className="product-card">
-                    <div className="product-image-container">
-                      <img src={product.image} alt={product.name} className="product-image" />
+                    <div className="product-image-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem', background: 'rgba(0,242,255,0.05)', border: '1px dashed var(--neon-blue)', borderRadius: '8px', overflow: 'hidden' }}>
+                      <code style={{ fontSize: '0.7rem', color: 'var(--neon-blue)', wordBreak: 'break-all' }}>{product.image}</code>
                     </div>
                     <div className="product-info">
                       <h3 className="product-name">{product.name}</h3>
